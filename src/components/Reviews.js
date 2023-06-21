@@ -57,10 +57,14 @@ const Reviews = () => {
         setAuthor(data[random]);
     }
 
+    function generate(){
+        return `author-${author.id}`;
+    }
+
     return (
         <div className="review">
             <h1 id='review-heading'>Our Reviews</h1>
-            <div id={`author-${author.id}`}>
+            <div id={generate()}>
                 <img className="person-img" src={author.image} alt={author.name} width='220px' />
                 <p className="author">{author.name}</p>
                 <p className="job">{author.job}</p>
